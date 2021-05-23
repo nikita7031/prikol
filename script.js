@@ -1,16 +1,20 @@
 console.log('Тест');
 
-/*var audio = new Audio('new_brawl_stars.mp3');
+/*var audio = new Audio('music.mp3');
 function play() {
-    var audio = new Audio('new_brawl_stars.mp3');
+    var audio = new Audio('music.mp3');
     audio.play();
 };
 audio.play();
 */
-// document.getElementById('new_brawl_stars.mp3').play();
+// document.getElementById('music.mp3').play();
+let play=0;
 
 document.querySelector('body').addEventListener('click', function() {
-    var audio = new Audio('https://pmp3.ru/uploads/music/russian/2020/10/unnv_kateeechi_-_bez_datyi.mp3');
+    if(play==0) {
+        var audio = new Audio('https://pmp3.ru/uploads/music/russian/2020/10/unnv_kateeechi_-_bez_datyi.mp3');
     audio.play();
     document.querySelector('.text').style.visibility='hidden';
+    play=1
+    }
 });
